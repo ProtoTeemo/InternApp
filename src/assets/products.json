@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Ноутбук MSI PS42 Modern 8MO (PS428MO-454XUA) Silver",
+        "price": 23999,
+        "prdoucer": "MSI",
+        "driveType": "SSD",
+        "desc": "Экран 14 IPS (1920x1080) Full HD, матовый / Intel Core i5-8265U (1.6 - 3.9 ГГц) / RAM 8 ГБ / SSD 256 ГБ / Intel UHD Graphics 620 / без ОД / Wi-Fi / Bluetooth / веб-камера / DOS / 1.18 кг / серебристый/ подсветка клавиатуры / сканер отпечатков пальцев / металлический корпус",
+        "inStore": true,
+        "inStock": true
+    },
+    {
+        "id": 2,
+        "name": "Ноутбук ASUS ZenBook 13 UX333FA-A3126T (90NB0JV1-M03550) Royal Blue",
+        "price": 33999,
+        "prdoucer": "ASUS",
+        "driveType": "SSD",
+        "desc": "Экран 13.3 IPS (1920x1080) Full HD, матовый / Intel Core i7-8565U (1.8 - 4.6 ГГц) / RAM 8 ГБ / SSD 512 ГБ / Intel UHD Graphics 620 / без ОД / Wi-Fi / Bluetooth / веб-камера / Windows 10 Home / 1.09 кг / синий",
+        "inStore": true,
+        "inStock": true
+    }
+]
