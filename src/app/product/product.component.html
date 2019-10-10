@@ -1,4 +1,8 @@
-<div class="card col-2">
-    <h2>{{product.name}}</h2>
-    <img src={{product.imgUrl}}/>
+<div class="pt-2 product-card__container">        
+        <a class="product-card__title-img" href="#">
+            <img src={{product.imgUrl}} alt="{{product.name}}"/>
+        </a>
+        <a href="#" class="product-card__title-text">
+            <span>{{product.name}}</span>
+        </a>
 </div>
