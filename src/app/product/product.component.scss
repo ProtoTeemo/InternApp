@@ -1,5 +1,6 @@
 
 $padding-value: 0em 1.1em;
+$margin-left: 0.7em;
 
 @mixin title-refs-style(){
     padding: $padding-value;
@@ -18,7 +19,7 @@ $padding-value: 0em 1.1em;
     display: flex;
     flex-direction: column;
     height: 300px;
-    border: 1px solid lightgray;
+    border: 0.5px solid lightgray;
     .product-card__title-img {
         position: relative;
         height: 150px;
@@ -38,4 +39,48 @@ $padding-value: 0em 1.1em;
     &:hover{
         box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
+
+    .product-card__info{
+        margin-top: 10px;
+        .product-card__price-block{
+            display: inline;
+            padding: 0.4em;
+            margin-left: $margin-left;
+            border-radius: 4px;
+        }
+
+        .product-card__reviews{
+            text-decoration: none;
+            font-size: 9pt;
+            margin-left: $margin-left;
+            i{
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
 }
+
+.sprite{
+    background-image: url("https://i.rozetka.ua/h.06f86f/sprite.svg");
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.in-stock-icon{
+    background-position: -790px -305px;
+    width: 61px;
+    height: 24px;
+    bottom: 5px;
+    left: 5px;
+}
+
+.reviews-icon{
+    background-position: -595px -714px;
+    width: 17px;
+    height: 14px;
+    top: 0;
+    left: 0;
+}
+
+

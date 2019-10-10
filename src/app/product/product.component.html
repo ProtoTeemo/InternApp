@@ -1,8 +1,28 @@
-<div class="pt-2 product-card__container">        
-        <a class="product-card__title-img" href="#">
-            <img src={{product.imgUrl}} alt="{{product.name}}"/>
+<div class="pt-2 product-card__container">
+    <i [style.visibility]="product.inStock ? 'visible' : 'hidden'" 
+        class="sprite in-stock-icon">
+    </i>      
+    <a class="product-card__title-img" href="#">
+        <img src={{product.imgUrl}} alt="{{product.name}}"/>
+    </a>
+    <a href="#" class="product-card__title-text">
+        <span>{{product.name}}</span>
+    </a>
+    <div class="product-card__info">
+        <div 
+        [style.backgroundColor]="product.inStock ? '#FEF2B8' : '#fff5c7'"
+        [style.color]="product.inStock ? '#FB5760' : 'black'"
+         class="product-card__price-block">
+            <span class="product-card__price">
+                {{product.price}}
+                <span class="product-card__price-uah-sign">
+                    &thinsp;грн
+                </span>
+            </span>
+        </div>
+        <a href="#" class="product-card__reviews">
+            <i class="sprite reviews-icon"></i>
+            2 отзыва
         </a>
-        <a href="#" class="product-card__title-text">
-            <span>{{product.name}}</span>
-        </a>
+    </div>
 </div>
