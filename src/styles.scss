@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-[class*="col"]{
-    padding: 0;   
+
+
+.row{
+    margin: 0;
+
+    [class*="col"]{
+        padding: 0;   
+    }
 }
