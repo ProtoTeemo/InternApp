@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "propName": "producer",
         "name": "Производитель",
         "options":[
             "Asus",
@@ -12,6 +13,7 @@
     },
     {
         "id": 2,
+        "propName":"driveType",
         "name": "Тип накопителя",
         "options":[
             "HDD",

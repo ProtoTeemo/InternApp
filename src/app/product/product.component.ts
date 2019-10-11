@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../Model/product';
+import { FilterViewModel } from '../ViewModel/FilterViewModel';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,6 +9,8 @@ import { Product } from '../Model/product';
 export class ProductComponent implements OnInit {
 
   @Input() public product: Product;
+
+  filterViewModel:FilterViewModel;
 
   constructor() { }
 
