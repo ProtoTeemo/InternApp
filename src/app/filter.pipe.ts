@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Product } from './Model/product';
-import { Filter } from './Model/filter';
 import { FilterViewModel } from './ViewModel/FilterViewModel';
 
 @Pipe({
@@ -8,10 +7,10 @@ import { FilterViewModel } from './ViewModel/FilterViewModel';
 })
 export class FilterPipe implements PipeTransform{
 
-    transform(data:Product[], filterViewModel:FilterViewModel) {
+    transform(products:Product[], filterViewModel:FilterViewModel) {
         console.log("In the pipe:", filterViewModel);
         if(filterViewModel.curFilters.length > 0){
-            return data.filter(product => {
+            let result = products.filter(product => {
                 for (let filter of filterViewModel.curFilters) {
                     console.log("In the pipe условие:", product[filter.filter.propName] != filter.selectedOption);
                     if(product[filter.filter.propName] != filter.selectedOption)
@@ -19,9 +18,10 @@ export class FilterPipe implements PipeTransform{
                 }
                 return true;
             });
+            return result;
         }
         else
-            return data;
+            return products;
     }
 
 }
