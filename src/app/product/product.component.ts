@@ -9,8 +9,7 @@ import { FilterViewModel } from '../ViewModel/FilterViewModel';
 export class ProductComponent implements OnInit {
 
   @Input() public product: Product;
-
-  filterViewModel:FilterViewModel;
+  @Input() filterViewModel:FilterViewModel;
 
   constructor() { }
 

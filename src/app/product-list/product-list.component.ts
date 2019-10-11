@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { Product } from '../Model/product';
 import { FilterViewModel } from '../ViewModel/FilterViewModel';
@@ -11,7 +11,7 @@ import { FilterViewModel } from '../ViewModel/FilterViewModel';
 export class ProductListComponent implements OnInit {
 
   products:Product[]; 
-  filterViewModel:FilterViewModel;
+  @Input() filterViewModel:FilterViewModel;
 
   constructor( private productsService:ProductsService) { }
 

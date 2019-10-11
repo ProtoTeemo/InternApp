@@ -8,14 +8,20 @@ import { FilterViewModel } from './ViewModel/FilterViewModel';
 })
 export class FilterPipe implements PipeTransform{
 
-    transform(data:Product[], curFilters:FilterViewModel) {
-        return data.filter(product => {
-            for (let filter of curFilters.curFilters) {
-                if(product[filter.filter.propName] != filter.selectedOption)
-                return false;
-            }
-            return true;
-        });
+    transform(data:Product[], filterViewModel:FilterViewModel) {
+        console.log("In the pipe:", filterViewModel);
+        if(filterViewModel.curFilters.length > 0){
+            return data.filter(product => {
+                for (let filter of filterViewModel.curFilters) {
+                    console.log("In the pipe условие:", product[filter.filter.propName] != filter.selectedOption);
+                    if(product[filter.filter.propName] != filter.selectedOption)
+                        return false;
+                }
+                return true;
+            });
+        }
+        else
+            return data;
     }
 
 }

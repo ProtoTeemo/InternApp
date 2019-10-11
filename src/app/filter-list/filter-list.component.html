@@ -1,3 +1,4 @@
 <p>Подбор по параметрам</p>
 <hr>
-<app-filter *ngFor="let filter of filters" [filter]="filter"></app-filter>
+<app-filter *ngFor="let filter of filters" 
+[filter]="filter" [filterViewModel]="filterViewModel"></app-filter>

@@ -16,8 +16,12 @@
     .filter-option{
         list-style: none;
         margin-bottom: 5px;
-        :hover{
-            cursor: pointer;
+        display: block;
+        .custom-checkbox{
+            :hover{
+                color: rgb(219, 71, 71);
+            }
         }
+
     }    
 }

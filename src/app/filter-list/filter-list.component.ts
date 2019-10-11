@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input } from '@angular/core';
 import { FiltersService } from '../filters.service';
 import { Filter } from '../Model/filter';
+import { FilterViewModel } from '../ViewModel/FilterViewModel';
 
 @Component({
   selector: 'app-filter-list',
@@ -10,6 +11,7 @@ import { Filter } from '../Model/filter';
 export class FilterListComponent implements OnInit {
 
   filters:Filter[];
+  @Input() filterViewModel:FilterViewModel;
 
   constructor(private filtersService:FiltersService) { }
 

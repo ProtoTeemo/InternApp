@@ -8,9 +8,9 @@
 </p>
 <div id="collapsible" [ngbCollapse]="isCollapsed">
     <ul class="filter-options-list">   
-        <li *ngFor="let option of filter.options" class="filter-option">
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" [attr.id]="option">
+        <li  class="filter-option">
+            <div class="custom-control custom-checkbox" *ngFor="let option of filter.options">
+                <input type="checkbox" class="custom-control-input" [attr.id]="option" (change)="setFilter(filter, option, $event)">
                 <label class="custom-control-label" [attr.for]="option">{{option}}</label>
             </div>
         </li>
