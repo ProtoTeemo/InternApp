@@ -1,3 +1,22 @@
 [
-    
+    {
+        "id": 1,
+        "name": "Производитель",
+        "options":[
+            "Asus",
+            "Del",
+            "MSI",
+            "Apple",
+            "Lenovo"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Тип накопителя",
+        "options":[
+            "HDD",
+            "SSD",
+            "HDD + SSD"
+        ]
+    }
 ]
