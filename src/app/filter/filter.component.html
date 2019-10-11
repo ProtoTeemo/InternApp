@@ -1,1 +1,6 @@
-<p>filter works!</p>
+<p>{{filter.name}}</p>
+<ul>
+    <li *ngFor="let option of filter.options">
+        {{option}}
+    </li>
+</ul>
