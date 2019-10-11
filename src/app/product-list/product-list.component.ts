@@ -10,7 +10,7 @@ import { Product } from '../Model/product';
 export class ProductListComponent implements OnInit {
 
   products:Product[];
-
+  public isCollapsed = false;
   constructor( private productsService:ProductsService) { }
 
   ngOnInit() {

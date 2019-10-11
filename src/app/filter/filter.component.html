@@ -1,6 +1,20 @@
-<p>{{filter.name}}</p>
-<ul>
-    <li *ngFor="let option of filter.options">
-        {{option}}
-    </li>
-</ul>
+<p class="filter-title">
+    <a href="#" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapsible">
+        {{filter.name}}
+        <span>{{isCollapsed ? '&darr;' : '&uarr;'}}</span>
+    </a>
+
+</p>
+<div id="collapsible" [ngbCollapse]="isCollapsed">
+    <ul class="filter-options-list">   
+        <li *ngFor="let option of filter.options" class="filter-option">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" [attr.id]="option">
+                <label class="custom-control-label" [attr.for]="option">{{option}}</label>
+            </div>
+        </li>
+    </ul>
+</div>
+<hr>
+

@@ -10,6 +10,8 @@ export class FilterComponent implements OnInit {
 
   @Input() filter:Filter;
 
+  isCollapsed:boolean = false;
+
   constructor() { }
 
   ngOnInit() {

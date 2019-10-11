@@ -1,0 +1,23 @@
+
+.filter-title{
+    margin-left: .3em;
+    a{
+        text-decoration: none; 
+    }
+    a:hover{
+        color: rgb(219, 71, 71);
+    }
+    span{
+        margin-left: 10px;
+    }
+}
+
+.filter-options-list{
+    .filter-option{
+        list-style: none;
+        margin-bottom: 5px;
+        :hover{
+            cursor: pointer;
+        }
+    }    
+}
