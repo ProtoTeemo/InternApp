@@ -22,36 +22,36 @@
         "inStock": true
     },
     {
-        "id": 2,
-        "name": "Ноутбук ASUS ZenBook 13 UX333FA-A3126T (90NB0JV1-M03550) Royal Blue",
-        "price": 33999,
-        "imgUrl":"https://i1.rozetka.ua/goods/10842892/lenovo_20kn005brt_images_10842892845.jpg",
-        "prdoucer": "Asus",
+        "id": 3,
+        "name": "Ноутбук Dell Vostro 14 5481 (N2205VN5481_WIN) Gray",
+        "price": 23411,
+         "imgUrl":"https://i1.rozetka.ua/goods/11818646/copy_dell_n2205vn5481erc_w10_5cb5b60a6aafc_images_11818646361.jpg",
+        "prdoucer": "Dell",
         "driveType": "SSD",
-        "desc": "Экран 13.3 IPS (1920x1080) Full HD, матовый / Intel Core i7-8565U (1.8 - 4.6 ГГц) / RAM 8 ГБ / SSD 512 ГБ / Intel UHD Graphics 620 / без ОД / Wi-Fi / Bluetooth / веб-камера / Windows 10 Home / 1.09 кг / синий",
+        "desc": "Экран 14 IPS (1920x1080) Full HD, глянцевый с антибликовым покрытием / Intel Core i5-8265U (1.6 - 3.9 ГГц) / RAM 8 ГБ / SSD 256 ГБ / nVidia GeForce MX130, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / Windows 10 Pro 64bit Rus / 1.55 кг / серый",
         "inStore": true,
-        "inStock": true
+        "inStock": false
     },
     {
-        "id": 2,
-        "name": "Ноутбук ASUS ZenBook 13 UX333FA-A3126T (90NB0JV1-M03550) Royal Blue",
-        "price": 33999,
-        "imgUrl":"https://i1.rozetka.ua/goods/10842892/lenovo_20kn005brt_images_10842892845.jpg",
-        "prdoucer": "Asus",
-        "driveType": "SSD",
-        "desc": "Экран 13.3 IPS (1920x1080) Full HD, матовый / Intel Core i7-8565U (1.8 - 4.6 ГГц) / RAM 8 ГБ / SSD 512 ГБ / Intel UHD Graphics 620 / без ОД / Wi-Fi / Bluetooth / веб-камера / Windows 10 Home / 1.09 кг / синий",
+        "id": 4,
+        "name": "Ноутбук Lenovo ThinkPad E480 (20KN004URT) Black",
+        "price": 17062,
+        "imgUrl":"https://i1.rozetka.ua/goods/4499782/lenovo_20kn004urt_images_4499782000.jpg",
+        "prdoucer": "Lenovo",
+        "driveType": "HDD",
+        "desc": "Экран 14 IPS (1920x1080) Full HD, матовый / Intel Core i5-8250U (1.6 - 3.4 ГГц) / RAM 4 ГБ / HDD 500 ГБ / Intel UHD 620 / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / DOS / 1.75 кг / черный",
         "inStore": true,
-        "inStock": true
+        "inStock": false
     },
     {
-        "id": 2,
-        "name": "Ноутбук ASUS ZenBook 13 UX333FA-A3126T (90NB0JV1-M03550) Royal Blue",
-        "price": 33999,
-        "imgUrl":"https://i1.rozetka.ua/goods/10842892/lenovo_20kn005brt_images_10842892845.jpg",
-        "prdoucer": "Asus",
+        "id": 5,
+        "name": "Ноутбук Lenovo V130-15IKB (81HN00N3RA) Iron Grey",
+        "price": 15876,
+        "imgUrl":"https://i1.rozetka.ua/goods/12352466/copy_lenovo_v130_15ikb_81hn00h8ra_5cebf6a44c283_images_12352466582.jpg",
+        "prdoucer": "Lenovo",
         "driveType": "SSD",
-        "desc": "Экран 13.3 IPS (1920x1080) Full HD, матовый / Intel Core i7-8565U (1.8 - 4.6 ГГц) / RAM 8 ГБ / SSD 512 ГБ / Intel UHD Graphics 620 / без ОД / Wi-Fi / Bluetooth / веб-камера / Windows 10 Home / 1.09 кг / синий",
+        "desc": "Экран 15.6 (1920x1080) Full HD, матовый / Intel Core i3-7020U (2.3 ГГц) / RAM 8 ГБ / SSD 256 ГБ / Intel HD Graphics 620 / DVD±RW / LAN / Wi-Fi / Bluetooth / веб-камера / Windows 10 Pro / 1.8 кг / серый",
         "inStore": true,
-        "inStock": true
+        "inStock": false
     }
 ]

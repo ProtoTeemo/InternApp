@@ -1,10 +1,4 @@
-
+<h2 class="col-12">Ноутбуки</h2>
     <app-product class="col-12 col-md-4 col-lg-3 col-xl-3" 
     *ngFor="let product of products | filter:filterViewModel?.curFilters"
     [product]="product"></app-product>    
-
-    <ul>
-        <li *ngFor="let filter of filterViewModel?.curFilters">
-            {{filter.selectedOption}}
-        </li>
-    </ul>
