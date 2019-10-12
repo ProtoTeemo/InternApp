@@ -19,4 +19,8 @@ export class FilterListComponent implements OnInit {
     this.filtersService.getFilters().subscribe((data:Filter[]) => this.filters = data);
   }
 
+  resetFilters():void{
+    this.filterViewModel.curFilters = new Array<{ filter:Filter, selectedOption:string }>();
+  }
+
 }

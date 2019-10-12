@@ -1,4 +1,13 @@
-<p>Подбор по параметрам</p>
-<hr>
-<app-filter *ngFor="let filter of filters" 
-[filter]="filter" [filterViewModel]="filterViewModel"></app-filter>
+
+<div class="filters-container mt-5">
+    <p>Подбор по параметрам</p>
+    <button class="btn text-danger border border-danger" 
+        *ngIf="filterViewModel?.curFilters?.length > 0"
+        (click)="resetFilters();">
+        Сбросить 
+        <span>&times;</span>
+    </button>
+    <hr>
+    <app-filter *ngFor="let filter of filters"
+    [filter]="filter" [filterViewModel]="filterViewModel"></app-filter>
+</div>

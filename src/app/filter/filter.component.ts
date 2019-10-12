@@ -29,9 +29,11 @@ export class FilterComponent implements OnInit {
 
     console.log("Filters:", this.filterViewModel.curFilters); 
   }
+  
+  checkOption(option):boolean{
+    return this.filterViewModel.curFilters.findIndex(f => f.selectedOption == option) != -1;
+  }
 
-  
-  
   @Input() filter:Filter;
 
   isCollapsed:boolean = false;

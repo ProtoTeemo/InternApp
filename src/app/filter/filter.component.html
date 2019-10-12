@@ -10,7 +10,8 @@
     <ul class="filter-options-list">   
         <li  class="filter-option">
             <div class="custom-control custom-checkbox" *ngFor="let option of filter.options">
-                <input type="checkbox" class="custom-control-input" [attr.id]="option" (change)="setFilter(filter, option, $event)">
+                <input [checked]="checkOption(option)"
+                 type="checkbox" class="custom-control-input" [attr.id]="option" (change)="setFilter(filter, option, $event)">
                 <label class="custom-control-label" [attr.for]="option">{{option}}</label>
             </div>
         </li>
