@@ -14,7 +14,7 @@
         [style.color]="product.inStock ? '#FB5760' : 'black'"
          class="product-card__price-block">
             <span class="product-card__price">
-                {{product.price}}
+                {{product.price | number:'':'ru'}} 
                 <span class="product-card__price-uah-sign">
                     &thinsp;грн
                 </span>

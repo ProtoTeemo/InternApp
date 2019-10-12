@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../Model/product';
 import { FilterViewModel } from '../ViewModel/FilterViewModel';
+import { registerLocaleData } from '@angular/common';
+import ru from '@angular/common/locales/ru';ru
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -14,7 +16,7 @@ export class ProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+    registerLocaleData( ru );
   }
 
 }
