@@ -11,6 +11,7 @@ import { FilterViewModel } from '../ViewModel/FilterViewModel';
 export class ProductListComponent implements OnInit {
 
   products:Product[]; 
+  pageOfItems:Product[];
   @Input() filterViewModel:FilterViewModel;
 
   constructor( private productsService:ProductsService) { }
@@ -19,6 +20,9 @@ export class ProductListComponent implements OnInit {
     this.productsService.getProducts().subscribe((data:Product[]) => {this.products = data});
   }
 
+  changePage(pageOfItems: Array<Product>){
+    this.pageOfItems = pageOfItems;
+  } 
   
 
 }

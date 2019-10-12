@@ -12,6 +12,7 @@ import { FilterComponent } from './filter/filter.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FilterPipe } from './filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     FilterListComponent,
     FilterComponent,
-    FilterPipe
+    FilterPipe,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,

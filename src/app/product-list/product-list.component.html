@@ -1,4 +1,11 @@
-<h1 class="col-12 h3 mb-4 list-title">Ноутбуки для бизнеса</h1>
-    <app-product class="col-12 col-md-4 col-lg-3 col-xl-3" 
-    *ngFor="let product of products | filter:filterViewModel?.curFilters"
-    [product]="product"></app-product>    
+<div class="row">
+        <h1 class="col-12 h3 mb-4 list-title">Ноутбуки для бизнеса</h1>
+        <app-product class="col-12 col-md-4 col-lg-3 col-xl-3" 
+        *ngFor="let product of pageOfItems | filter:filterViewModel?.curFilters"
+        [product]="product"></app-product>
+</div>
+  
+
+<div class="card-footer pb-5 pt-3">
+        <jw-pagination [items]="products" (changePage)="changePage($event)"></jw-pagination>
+</div>
