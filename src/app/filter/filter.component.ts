@@ -14,11 +14,11 @@ export class FilterComponent implements OnInit {
   setFilter(curFilter:Filter, selectedOption:string, event){
     if(event.target.checked)
     {
-      if(!this.filterViewModel || !this.filterViewModel.curFilters)
+      /*if(!this.filterViewModel || !this.filterViewModel.curFilters)
       {
         this.filterViewModel = new FilterViewModel();
         this.filterViewModel.curFilters = new Array<{ filter:Filter, selectedOption:string }>();
-      }
+      }*/
       console.log("In filter comp.: ", this.filterViewModel)
       this.filterViewModel.curFilters.push( { filter: curFilter, selectedOption: selectedOption });
     }
