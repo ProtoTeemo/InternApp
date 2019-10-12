@@ -1,11 +1,17 @@
-<div class="row">
+<div class="row" *ngIf="filterViewModel?.curFilters?.length == 0">
         <h1 class="col-12 h3 mb-4 list-title">Ноутбуки для бизнеса</h1>
         <app-product class="col-12 col-md-4 col-lg-3 col-xl-3" 
         *ngFor="let product of pageOfItems | filter:filterViewModel?.curFilters"
         [product]="product"></app-product>
 </div>
+<div class="row" *ngIf="filterViewModel?.curFilters?.length > 0">
+        <h1 class="col-12 h3 mb-4 list-title">Ноутбуки для бизнеса</h1>
+        <app-product class="col-12 col-md-4 col-lg-3 col-xl-3" 
+        *ngFor="let product of products | filter:filterViewModel?.curFilters"
+        [product]="product"></app-product>
+</div>
   
 
-<div class="card-footer pb-5 pt-3">
+<div class="card-footer mb-5 mt-3 ml-3" *ngIf="filterViewModel?.curFilters?.length == 0">
         <jw-pagination [items]="products" (changePage)="changePage($event)"></jw-pagination>
 </div>
