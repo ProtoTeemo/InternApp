@@ -9,7 +9,18 @@ import { Filter } from './Model/filter';
 export class FilterPipe implements PipeTransform{
 
     transform(products:Product[], filters:{ filter:Filter, selectedOption:string}[]) {
-        if(filters.length > 0){
+
+        if(filters.length > 0)
+        {
+            console.log("from pipe: ", filters);
+            let result = products.filter(p => filters[filters.length - 1].selectedOption == p.prdoucer);
+            return result;
+        }
+        else 
+            return products;
+
+        //main alghoritm
+        /*if(filters.length > 0){
             console.log("In the pipe условие:", filters[0].selectedOption);
             let result = products.filter(product => {
                 for (let filter of filters) {
@@ -21,7 +32,16 @@ export class FilterPipe implements PipeTransform{
             return result;
         }
         else
-            return products;
+            return products;*/
+
+        //test alghoritm (has result)
+       /* if(selectedOption)
+        {
+            let result = products.filter(p => p.prdoucer == selectedOption);
+            return result;
+        }
+        else
+            return products;*/
     }
 
 }

@@ -12,17 +12,25 @@ export class FilterComponent implements OnInit {
   @Input() filterViewModel:FilterViewModel;
 
   setFilter(curFilter:Filter, selectedOption:string, event){
-    if(event.target.checked)
-    {
-      /*if(!this.filterViewModel || !this.filterViewModel.curFilters)
-      {
-        this.filterViewModel = new FilterViewModel();
-        this.filterViewModel.curFilters = new Array<{ filter:Filter, selectedOption:string }>();
-      }*/
-      console.log("In filter comp.: ", this.filterViewModel)
+    if(event.target.checked){
       this.filterViewModel.curFilters.push( { filter: curFilter, selectedOption: selectedOption });
     }
+    else{
+      console.log("Before delete: ", this.filterViewModel.curFilters)
+      if(this.filterViewModel.curFilters.length <= 1){
+        this.filterViewModel.curFilters = new Array<{ filter:Filter, selectedOption:string }>();
+      }else
+      {
+        let removedFilterIndex = this.filterViewModel.curFilters.findIndex(f => f.selectedOption == selectedOption);
+        console.log(`deleted index: ${removedFilterIndex} by selectedOption: ${selectedOption}`);
+        this.filterViewModel.curFilters.splice(removedFilterIndex, 1);     
+      }
+    }
+
+    console.log("Filters:", this.filterViewModel.curFilters); 
   }
+
+  
   
   @Input() filter:Filter;
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { ProductsService } from '../products.service';
 import { Product } from '../Model/product';
 import { FilterViewModel } from '../ViewModel/FilterViewModel';
@@ -8,7 +8,11 @@ import { FilterViewModel } from '../ViewModel/FilterViewModel';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, OnChanges {
+  
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("О ЧУДО, ЧТО-ТО ПОМЕНЯЛОСЬ: ", changes);
+  }
 
   products:Product[]; 
   @Input() filterViewModel:FilterViewModel;
@@ -18,5 +22,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.productsService.getProducts().subscribe((data:Product[]) => {this.products = data});
   }
+
+  
 
 }
