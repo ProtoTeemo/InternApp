@@ -14,7 +14,7 @@ export class FilterPipe implements PipeTransform{
         if(filters.length > 0){
             let isCorrect = false;
             let result = products.filter(product => {
-                for (let filter of filters) {
+                /*for (let filter of filters) {
                     switch (filter.filter.propName) {
                         case "producer":
                             if(product.prdoucer == filter.selectedOption)
@@ -29,7 +29,34 @@ export class FilterPipe implements PipeTransform{
                         default:
                             return false;
                     }
+                }*/
+                let producerFilters = filters.filter(f => {
+                    return f.filter.propName == "producer";
+                });
+                let driveTypeFilters = filters.filter(f => {
+                    return f.filter.propName == "driveType";
+                });
+
+                let isCorrect:boolean = false;
+
+                if(producerFilters.length > 0){
+                    for (let filter of producerFilters) {
+                        if(product.prdoucer == filter.selectedOption)
+                            isCorrect = true;
+                    }
+                    if(!isCorrect) return false;
                 }
+
+
+                if(driveTypeFilters.length > 0){
+                    for (let filter of driveTypeFilters) {
+                        if(product.driveType == filter.selectedOption)
+                            isCorrect = true;
+                        else
+                            return false;   
+                    }
+                }
+                return isCorrect;
             });
             return result;
         }
