@@ -14,8 +14,6 @@ export class AppComponent {
   constructor() {
     this.filterViewModel = new FilterViewModel();
     this.filterViewModel.curFilters = new Array<{ filter:Filter, selectedOption:string }>();
-    console.log("In main comp.: ", this.filterViewModel)
-    
   }
   title = 'InternApp';
   filterViewModel:FilterViewModel;

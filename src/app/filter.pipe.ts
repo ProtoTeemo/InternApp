@@ -4,44 +4,30 @@ import { FilterViewModel } from './ViewModel/FilterViewModel';
 import { Filter } from './Model/filter';
 
 @Pipe({
-    name: "filter"
+    name: "filter",
+    pure: false
 })
 export class FilterPipe implements PipeTransform{
 
     transform(products:Product[], filters:{ filter:Filter, selectedOption:string}[]) {
-
-        if(filters.length > 0)
-        {
-            console.log("from pipe: ", filters);
-            let result = products.filter(p => filters[filters.length - 1].selectedOption == p.prdoucer);
-            return result;
-        }
-        else 
-            return products;
-
-        //main alghoritm
-        /*if(filters.length > 0){
-            console.log("In the pipe условие:", filters[0].selectedOption);
+        if(filters.length > 0){
             let result = products.filter(product => {
                 for (let filter of filters) {
-                    if(product[filter.filter.propName] != filter.selectedOption)
-                        return false;
+                    switch (filter.filter.propName) {
+                        case "producer":
+                            return product.prdoucer == filter.selectedOption;
+                        case "driveType":
+                            return product.driveType == filter.selectedOption;
+                        default:
+                            return false;
+                            break;
+                    }
                 }
-                return true;
             });
             return result;
         }
         else
-            return products;*/
-
-        //test alghoritm (has result)
-       /* if(selectedOption)
-        {
-            let result = products.filter(p => p.prdoucer == selectedOption);
-            return result;
-        }
-        else
-            return products;*/
+            return products;
     }
 
 }
