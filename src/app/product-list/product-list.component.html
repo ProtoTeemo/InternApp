@@ -10,8 +10,8 @@
         *ngFor="let product of products | filter:filterViewModel?.curFilters"
         [product]="product"></app-product>
 </div>
-  
-
-<div class="card-footer mb-5 mt-3 ml-3" *ngIf="filterViewModel?.curFilters?.length == 0">
-        <jw-pagination [items]="products" (changePage)="changePage($event)"></jw-pagination>
+<div class="card-footer mb-5 mt-3 ml-3" *ngIf="filterViewModel?.curFilters?.length == 0"
+[class.fixed-footer]="pageOfItems?.length &lt;= 3">
+        <jw-pagination [items]="products"(changePage)="changePage($event)"  [class.fixed-footer]="pageOfItems?.length &lt;= 3" ></jw-pagination>
 </div>
+
