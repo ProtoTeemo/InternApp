@@ -12,6 +12,7 @@ export class ProductComponent implements OnInit {
 
   @Input() public product: Product;
   @Input() filterViewModel:FilterViewModel;
+  isShownDesc:boolean = false;
 
   constructor() { }
 

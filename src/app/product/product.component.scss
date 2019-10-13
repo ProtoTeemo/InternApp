@@ -1,13 +1,20 @@
 
 $padding-value: 0em 1.1em;
-$margin-left: 0.7em;
+$margin-left: 0.9em;
 
 @mixin title-refs-style(){
     padding: $padding-value;
     text-decoration: none;
     margin-top: 2em;
     display: block;
-    height: 32px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #221f1f;
+}
+
+@mixin descrition-style {
+    padding: $padding-value;
+    margin-top: 2em;
     margin-bottom: 8px;
     overflow: hidden;
     font-size: 12px;
@@ -16,10 +23,11 @@ $margin-left: 0.7em;
 }
 
 .product-card__container{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    height: 300px;
     border: 0.3px solid rgb(223, 223, 223);
+
     .product-card__title-img {
         position: relative;
         height: 150px;
@@ -38,6 +46,9 @@ $margin-left: 0.7em;
 
     &:hover{
         box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        height: 485px;
+        z-index: 3;
+        position: absolute;
     }
 
     .product-card__info{
@@ -58,6 +69,55 @@ $margin-left: 0.7em;
                 vertical-align: middle;
             }
         }
+
+        .product-card__tools-container{
+            display: flex;
+            margin: .7em 0em .7em $margin-left + 0.2;
+            .tool-btn-buy a{
+                display: block;
+                padding: 4px 10px 5px;
+                margin-right: 15px;
+                background-image: url("https://i.rozetka.ua/h.06f86f/sprite.svg");
+                background-position: -297px -798px;
+                width: 24px;
+                height: 23px;
+            }
+
+            .tool-btn-wish-list a{
+                border: 1px solid transparent;
+                border-radius: 3px;
+                display: inline-block;
+                padding: 4px 10px 5px;
+                margin-right: 15px;
+                background-position: -243px -798px;
+                background-image: url("https://i.rozetka.ua/h.06f86f/sprite.svg");
+                width: 26px;
+                height: 23px;
+
+                &:hover{
+                    border: 0.5px solid rgb(223, 222, 222);
+                }
+            }
+
+            .tool-btn-compare a{                
+                border: 1px solid transparent;
+                border-radius: 3px;
+                display: inline-block;
+                padding: 4px 10px 5px;
+                background-position: -860px -447px;
+                background-image: url("https://i.rozetka.ua/h.06f86f/sprite.svg");
+                width: 30px;
+                height: 23px;
+
+                &:hover{
+                    border: 0.5px solid rgb(223, 222, 222);
+                }
+            }
+        }
+    }
+
+    .desc-text{
+        @include descrition-style();
     }
 }
 
