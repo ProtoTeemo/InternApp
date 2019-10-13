@@ -15,22 +15,7 @@ export class FilterPipe implements PipeTransform{
             let isCorrect = false;
             // need to refactoring
             let result = products.filter(product => {
-                /*for (let filter of filters) {
-                    switch (filter.filter.propName) {
-                        case "producer":
-                            if(product.prdoucer == filter.selectedOption)
-                                return true;
-                            else
-                                continue;
-                        case "driveType":
-                            if(product.driveType == filter.selectedOption)
-                                return true;
-                            else
-                                continue;
-                        default:
-                            return false;
-                    }
-                }*/
+                
                 let producerFilters = filters.filter(f => {
                     return f.filter.propName == "producer";
                 });
