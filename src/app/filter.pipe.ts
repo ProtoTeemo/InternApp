@@ -13,6 +13,7 @@ export class FilterPipe implements PipeTransform{
     transform(products:Product[], filters:{ filter:Filter, selectedOption:string}[]) {        
         if(filters.length > 0){
             let isCorrect = false;
+            // need to refactoring
             let result = products.filter(product => {
                 /*for (let filter of filters) {
                     switch (filter.filter.propName) {
